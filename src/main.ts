@@ -26,7 +26,10 @@ export default class GeneCodePlugin extends Plugin {
 			}
 
 			const wrapper = el.createDiv({ cls: "gene-code-diagram" });
-			wrapper.appendChild(document.adoptNode(svgEl));
+			// Use `activeDocument` (Obsidian global) rather than `document` so the
+			// node is adopted into the correct document when the note is in a
+			// popout window.
+			wrapper.appendChild(activeDocument.adoptNode(svgEl));
 		});
 	}
 

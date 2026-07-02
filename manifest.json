@@ -1,9 +1,9 @@
 {
   "id": "gene-code",
   "name": "Gene Code",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "minAppVersion": "1.0.0",
-  "description": "Render gene-code lollipop and pedigree diagrams in Obsidian notes.",
+  "description": "Render gene-code lollipop and pedigree diagrams from code blocks in your notes.",
   "author": "Anton Zhuravlev",
   "authorUrl": "https://github.com/neznayer",
   "isDesktopOnly": false
