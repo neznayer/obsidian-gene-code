@@ -1,0 +1,32 @@
+/* gene-code diagrams use hardcoded black/white ink. For pedigrees that black/
+   white fill is a domain convention (affected = filled, unaffected = open), so
+   we can't theme it to currentColor without losing meaning. Instead we render
+   every diagram on a fixed light "paper" surface that reads as an intentional
+   figure in both light and dark themes. */
+.gene-code-diagram {
+	background: #fafafa;
+	color: #1a1a1a;
+	border: 1px solid var(--background-modifier-border, rgba(0, 0, 0, 0.1));
+	border-radius: 8px;
+	padding: 16px;
+	overflow-x: auto;
+}
+
+/* On dark themes, lift the card off the page with a soft shadow so the light
+   surface looks deliberate rather than like an unstyled white block. */
+.theme-dark .gene-code-diagram {
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.gene-code-diagram svg {
+	display: block;
+	height: auto;
+}
+
+.gene-code-error {
+	color: var(--text-error);
+	background: var(--background-secondary);
+	border-radius: 6px;
+	padding: 8px 12px;
+	white-space: pre-wrap;
+}

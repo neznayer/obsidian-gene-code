@@ -1,0 +1,24 @@
+{
+  "name": "@gene-code/obsidian",
+  "author": {
+    "name": "Anton Zhuravlev"
+  },
+  "version": "0.0.1",
+  "description": "Obsidian plugin to render gene-code lollipop and pedigree diagrams.",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "dev": "bun run esbuild.config.mjs",
+    "build": "tsc -noEmit -skipLibCheck && bun run esbuild.config.mjs production"
+  },
+  "dependencies": {
+    "@gene-code/core": "latest"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.5",
+    "obsidian": "latest",
+    "typescript": "^5"
+  }
+}
