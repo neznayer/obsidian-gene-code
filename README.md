@@ -1,6 +1,6 @@
 # gene-code for Obsidian
 
-Render [gene-code](https://github.com/neznayer/gene-code) lollipop and pedigree diagrams directly in your Obsidian notes.
+Render lifescience-related diagrams directly in your Obsidian notes, like Mermaid but for lifescience. 
 
 Write a `gene-code` code block and the plugin renders it inline as an SVG figure.
 
@@ -55,27 +55,6 @@ pedigreeDiagram
     node baby male unaffected noncarrier dad-mom
 ```
 ````
-
-Diagrams are drawn on a fixed light "paper" surface so pedigree fill conventions (affected = filled, unaffected = open) stay meaningful in both light and dark themes. If a block can't be parsed, an inline error is shown in its place.
-
-## Installation
-
-### Manual
-
-1. Build the plugin (see below) or download a release.
-2. Copy `main.js`, `manifest.json`, and `styles.css` into
-   `<vault>/.obsidian/plugins/gene-code/`.
-3. Enable **gene-code** in Obsidian's *Community plugins* settings.
-
-## Development
-
-Requires [Bun](https://bun.sh).
-
-```bash
-bun install
-bun run dev     # watch build
-bun run build   # type-check + production build
-```
 
 Rendering is provided by [`@gene-code/core`](https://github.com/neznayer/gene-code); this plugin is the thin Obsidian integration layer.
 
