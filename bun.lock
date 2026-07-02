@@ -5,7 +5,7 @@
     "": {
       "name": "@gene-code/obsidian",
       "dependencies": {
-        "@gene-code/core": "^0.1.0",
+        "@gene-code/core": "^0.2.0",
       },
       "devDependencies": {
         "esbuild": "0.25.5",
@@ -69,7 +69,7 @@
 
     "@esbuild/win32-x64": ["@esbuild/win32-x64@0.25.5", "http://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.25.5.tgz", { "os": "win32", "cpu": "x64" }, "sha512-TXv6YnJ8ZMVdX+SXWVBo/0p8LTcrUYngpWjvm91TMjjBQii7Oz11Lw5lbDV5Y0TzuhSJHwiH4hEtC1I42mMS0g=="],
 
-    "@gene-code/core": ["@gene-code/core@0.1.0", "http://registry.npmjs.org/@gene-code/core/-/core-0.1.0.tgz", {}, "sha512-mapr2eaWq4/IrD77sIx6vkAjA4tBBWDmNkJNnLcvE3ikLwF6jXYSpIwKRUECreHxvU/43mHIpfVxAWZP/ow+ig=="],
+    "@gene-code/core": ["@gene-code/core@0.2.0", "", {}, "sha512-keMNgWZt5zkNjWLM96zr7fVRALFSR71CgPz7eI3414xrJSSjcKZWwXAuMsMkeCrc2kEbkmpb7Jv9RNlCxXxnIA=="],
 
     "@marijn/find-cluster-break": ["@marijn/find-cluster-break@1.0.3", "http://registry.npmjs.org/@marijn/find-cluster-break/-/find-cluster-break-1.0.3.tgz", {}, "sha512-FY+MKLBoTsLNJF/eLWaOsXGdz6uh3Iu1axjPf6TUq92IYumcTcXWHoS747JARLkcdlJ/Waiaxc5wQfFO8jC6NA=="],
 
