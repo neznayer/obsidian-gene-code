@@ -1,21 +1,29 @@
-/* gene-code diagrams use hardcoded black/white ink. For pedigrees that black/
-   white fill is a domain convention (affected = filled, unaffected = open), so
-   we can't theme it to currentColor without losing meaning. Instead we render
-   every diagram on a fixed light "paper" surface that reads as an intentional
-   figure in both light and dark themes. */
+/* @gene-code/core emits its colors as `var(--gc-*, <fallback>)` tokens, so we
+   theme diagrams by mapping those tokens onto Obsidian's theme variables here.
+   Structural ink follows the note's text color; the tuned palette hues are kept
+   (their meaning is the hue) but nudged toward theme surfaces where sensible.
+
+   Pedigree fills are a domain convention (affected = filled, unaffected = open),
+   so --gc-ink / --gc-surface must stay high-contrast: affected symbols fill with
+   ink, unaffected with the card background, outlined in ink either way. */
 .gene-code-diagram {
-	background: #fafafa;
-	color: #1a1a1a;
+	/* Structural ink + the "open"/"filled" pedigree pair. */
+	--gc-ink: var(--text-normal);
+	--gc-surface: var(--background-primary);
+
+	/* Lollipop palette — keep the meaningful hues from core's fallbacks. */
+	--gc-domain-fill: var(--background-modifier-border);
+	--gc-domain-stroke: var(--text-muted);
+	--gc-stem: var(--text-muted);
+	/* The head ring separates stacked discs; match the card so it reads as a gap. */
+	--gc-head-ring: var(--background-primary);
+
+	background: var(--background-primary);
+	color: var(--text-normal);
 	border: 1px solid var(--background-modifier-border, rgba(0, 0, 0, 0.1));
 	border-radius: 8px;
 	padding: 16px;
 	overflow-x: auto;
-}
-
-/* On dark themes, lift the card off the page with a soft shadow so the light
-   surface looks deliberate rather than like an unstyled white block. */
-.theme-dark .gene-code-diagram {
-	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .gene-code-diagram svg {
